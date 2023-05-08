@@ -1,17 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//---------------Lesson----------------------
+// function Greeting() {
+//   return <h1>Hello, WOrld</h1>;
+// }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// export default Greeting;
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// root.render(<Greeting />);
+
+//---------------finishes here----------------------
+
+function BookList() {
+  return (
+    <div>
+      <Book />
+      <Book />
+      <Book />
+    </div>
+  );
+}
+
+export default BookList;
+
+const Book = () => {
+  return (
+    <article>
+      <Title />
+      <Image />
+      <Author />
+    </article>
+  );
+};
+const Title = () => <h2 className="title">Title here</h2>;
+const Image = () => <h2 className="images">Book Image here</h2>;
+const Author = () => <h2 className="author">Author Name</h2>;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList />);
